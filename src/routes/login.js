@@ -6,7 +6,8 @@ const passport = require('passport');
 
 router.get('/', forwardAuthenticated, (req, res) => {
     res.render('login/login',{
-        user:discord.client.user.username
+        user:discord.client.user.username,
+        avatar:discord.client.user.avatarURL()
     })
 })
 
