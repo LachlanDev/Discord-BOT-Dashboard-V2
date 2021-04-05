@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Discord BOT Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../login/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="particles-js"></div>
+
+<div class="text">
+        <% if(error != ''){ %>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <%= error %>
+            </div>
+        <% } %>    
+        <% if(success != ''){ %>
+          <div class="alert-success">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <%= success %>
+          </div>
+      <% } %>    
+    <h1 class="centre">Welcome: <%=user%></h1>
+    <img src="<%=avatar%>">
+    <h4 class="centre">Discord BOT Dashboard<br>Created by: LachlanDev#8014</h4>
+	<div class="centre">
+    <a href="/login/api"><button class="button"><span>Login </span></button></a>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cldup.com/S6Ptkwu_qA.js'></script><script  src="../login/script.js"></script>
+</body>
+</html>
