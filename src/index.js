@@ -39,7 +39,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', require('./routes/index.js'));
+app.use('/', require('./routes/home.js'));
 app.use('/login', require('./routes/login.js'));
 
 http.listen(port, () => {
