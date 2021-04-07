@@ -24,6 +24,7 @@
     "enmap": "^5.8.4",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "json-update": "^5.3.0",
     "passport": "^0.4.1",
     "passport-discord": "^0.1.4",
     "socket.io": "^4.0.1"
