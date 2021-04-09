@@ -12,6 +12,7 @@ port = 3000;
 
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true,limit: '5mb' }));
 
 require('./config/passport')(passport);
 
@@ -40,6 +41,9 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', require('./routes/home.js'));
+app.use('/', require('./routes/settings.js'));
+app.use('/', require('./routes/guilds.js'));
+
 app.use('/login', require('./routes/login.js'));
 
 http.listen(port, () => {
