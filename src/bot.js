@@ -8,6 +8,11 @@ client.commands = new Enmap();
 chalk = require('chalk');
 client.config = config;
 
+if(!config.token){
+  console.log(chalk.red('Error, Please add a token to config!'))
+  process.exit()
+}
+
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
@@ -20,6 +25,7 @@ fs.readdir("./events/", (err, files) => {
 client.commands = new Enmap();
 
 fs.readdir("./commands/", (err, files) => {
+  console.log(chalk.red('Loading Commands...'))
   if (err) return console.error(err);
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
