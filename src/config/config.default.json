@@ -1,0 +1,8 @@
+{
+    "clientID":"BOTclientID",
+    "clientSecret":"BOTclientSecret",
+    "callbackURL":"BOTcallbackURL",
+    "Admin":["userAdminID"],
+    "token":"BOTtoken",
+    "prefix":"-"
+}
