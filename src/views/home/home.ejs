@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- End Required meta tags -->
+    <!-- Begin SEO tag -->
+    <title> Dashboard | <%=client.user.username%> </title>
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
+    <!-- BEGIN PLUGINS STYLES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@0ac23ca/css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"><!-- END PLUGINS STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="../home/assets/stylesheets/theme-dark.min.css" data-skin="default">
+  </head>
+  <body>
+    <!-- .app -->
+    <div class="app">
+      <!--[if lt IE 10]>
+      <div class="page-message" role="alert">You are using an <strong>outdated</strong> browser. Please <a class="alert-link" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</div>
+      <![endif]-->
+      <!-- .app-header -->
+      <header class="app-header app-header-dark">
+        <!-- .top-bar -->
+        <div class="top-bar">
+          <!-- .top-bar-brand -->
+          <div class="top-bar-brand">
+            <!-- toggle aside menu -->
+            <h5>Discord BOT Dashboard</h5>
+          </div><!-- /.top-bar-brand -->
+          <!-- .top-bar-list -->
+          <div class="top-bar-list">
+            <!-- .top-bar-item -->
+            <div class="top-bar-item px-2 d-md-none d-lg-none d-xl-none">
+              <!-- toggle menu -->
+              <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="toggle menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle menu -->
+            </div>
+            <div class="top-bar-item top-bar-item-right px-0 d-none d-sm-flex">
+              <!-- .btn-account -->
+              <div class="dropdown d-none d-md-flex">
+                <button class="btn-account" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user-avatar user-avatar-md"><img src="https://cdn.discordapp.com/avatars/<%= profile.id %>/<%= profile.avatar %>" alt=""></span> <span class="account-summary pr-lg-4 d-none d-lg-block"><span class="account-name"><%= profile.username %></span> <span class="account-description">Admin</span></span></button> <!-- .dropdown-menu -->
+                <div class="dropdown-menu">
+                  <div class="dropdown-arrow d-lg-none" x-arrow=""></div>
+                  <div class="dropdown-arrow ml-3 d-none d-lg-block"></div>
+                  <h6 class="dropdown-header d-none d-md-block d-lg-none"> <%= profile.username %> </h6><a class="dropdown-item" href="/logout"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                </div><!-- /.dropdown-menu -->
+              </div><!-- /.btn-account -->
+            </div><!-- /.top-bar-item -->
+          </div><!-- /.top-bar-list -->
+        </div><!-- /.top-bar -->
+      </header><!-- /.app-header -->
+      <!-- .app-aside -->
+      <aside class="app-aside app-aside-expand-md app-aside-light">
+        <!-- .aside-content -->
+        <div class="aside-content">
+          <!-- .aside-header -->
+          <header class="aside-header d-block d-md-none">
+            <!-- .btn-account -->
+            <button class="btn-account" type="button" data-toggle="collapse" data-target="#dropdown-aside"><span class="user-avatar user-avatar-lg"><img src="https://cdn.discordapp.com/avatars/<%= profile.id %>/<%= profile.avatar %>" alt=""></span> <span class="account-icon"><span class="fa fa-caret-down fa-lg"></span></span> <span class="account-summary"><span class="account-name"><%= profile.username %></span> <span class="account-description">Admin</span></span></button> <!-- /.btn-account -->
+            <!-- .dropdown-aside -->
+            <div id="dropdown-aside" class="dropdown-aside collapse">
+              <!-- dropdown-items -->
+              <div class="pb-3">
+                <a class="dropdown-item" href="/logout"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+              </div><!-- /dropdown-items -->
+            </div><!-- /.dropdown-aside -->
+          </header><!-- /.aside-header -->
+          <!-- .aside-menu -->
+          <div class="aside-menu overflow-hidden">
+            <!-- .stacked-menu -->
+            <nav id="stacked-menu" class="stacked-menu">
+              <!-- .menu -->
+              <ul class="menu">
+                <!-- .menu-item -->
+                <li class="menu-item has-active">
+                  <a href="/" class="menu-link"><span class="menu-icon fas fa-home"></span> <span class="menu-text">Dashboard</span></a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="/plugins" class="menu-link"><span class="menu-icon fas fa-rocket"></span> <span class="menu-text">Plugins</span></a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="/guilds" class="menu-link"><span class="menu-icon fas fa-server"></span> <span class="menu-text">Guilds</span></a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                    <a href="/support" class="menu-link"><span class="menu-icon fas fa-question-circle"></span> <span class="menu-text">Support</span></a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                    <a href="/settings" class="menu-link"><span class="menu-icon fas fa-cog"></span> <span class="menu-text">Settings</span></a>
+                </li>
+              </ul><!-- /.menu -->
+            </nav><!-- /.stacked-menu -->
+          </div><!-- /.aside-menu -->
+        </div><!-- /.aside-content -->
+      </aside><!-- /.app-aside -->
+      <!-- .app-main -->
+      <main class="app-main">
+        <!-- .wrapper -->
+        <div class="wrapper">
+          <!-- .page -->
+          <div class="page">
+            <!-- .page-inner -->
+            <div class="page-inner">
+              <!-- .page-title-bar -->
+              <header class="page-title-bar">
+                <% if(Currentversion != Latestversion){ %>
+                  <div class="alert alert-warning has-icon alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <div class="alert-icon">
+                      <span class="oi oi-flag"></span>
+                    </div>
+                    <h4 class="alert-heading"> Update Available! </h4>
+                    <p class="mb-0">You currently don't have the latest version of Discord BOT Dashbaord V2 installed, please consider updating.</p>
+                  </div>
+                <% } %>
+                <div class="d-flex flex-column flex-md-row">
+                  <p class="lead">
+                    <span class="font-weight-bold">Welcome, <%= profile.username %></span> <span class="d-block text-muted">Here’s what’s happening with <strong><%=client.user.username%></strong> today.</span>
+                  </p>
+                  <div class="ml-auto">
+                  </div>
+                </div>
+              </header><!-- /.page-title-bar -->
+              <!-- .page-section -->
+              <div class="page-section">
+                <!-- .section-block -->
+                <div class="section-block">
+                  <!-- metric row -->
+                  <a href="/"><button type="button" class="btn btn-info"><i class="oi oi-loop-circular"></i> Refresh Data</button></a>
+                  <div class="metric-row">
+                    <div class="col-lg-9">
+                      <div class="metric-row metric-flush">
+                        <!-- metric column -->
+                        <div class="col">
+                          <!-- .metric -->
+                          <div class="metric metric-bordered align-items-center">
+                            <h2 class="metric-label"> Server Count (Guilds) </h2>
+                            <p class="metric-value h3">
+                              <sub><i class="fas fa-server"></i></sub> <span class="value"><%=number.formatNumber(client.guilds.cache.size)%></span>
+                            </p>
+                        </div> <!-- /.metric -->
+                        </div><!-- /metric column -->
+                        <!-- metric column -->
+                        <div class="col">
+                          <!-- .metric -->
+                          <div class="metric metric-bordered align-items-center">
+                            <h2 class="metric-label"> User Count (All Guilds) </h2>
+                            <p class="metric-value h3">
+                              <sub><i class="oi oi-people"></i></sub> <span class="value"><%=number.formatNumber(client.guilds.cache.reduce((a, g) => a + g.memberCount, 0))%></span>
+                            </p>
+                        </div> <!-- /.metric -->
+                        </div><!-- /metric column -->
+                        <!-- metric column -->
+                        <div class="col">
+                          <!-- .metric -->
+                          <div class="metric metric-bordered align-items-center">
+                            <h2 class="metric-label"> API Latency </h2>
+                            <p class="metric-value h3">
+                              <sub><i class="fa fa-broadcast-tower"></i></sub> <span class="value"><%=Math.round(client.ws.ping)%>ms</span>
+                            </p>
+                        </div> <!-- /.metric -->
+                        </div><!-- /metric column -->
+                        <div class="col">
+                            <!-- .metric -->
+                            <div class="metric metric-bordered align-items-center">
+                              <h2 class="metric-label"> Prefix </h2>
+                              <p class="metric-value h3">
+                                <sub><i class="fa fa-bullhorn"></i></sub> <span class="value"><%=prefix%></span>
+                              </p>
+                          </div> <!-- /.metric -->
+                          </div><!-- /metric column -->
+                      </div>
+                    </div><!-- metric column -->
+                    <div class="col-lg-3">
+                      <!-- .metric -->
+                      <div class="metric metric-bordered">
+                        <div class="metric-badge">
+                          <span class="badge badge-lg badge-success"><span class="oi oi-media-record pulse mr-1"></span> Uptime</span>
+                        </div>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-timer"></i></sub> <span class="value" id="uptime"></span>
+                        </p>
+                    </div> <!-- /.metric -->
+                    </div><!-- /metric column -->
+                  </div><!-- /metric row -->
+                </div><!-- /.section-block -->
+                  <!-- grid column -->
+                  <div class="section-block">
+                    <h4> Dashboard</h4>
+                    <p class="text-muted"> Find the latest news with Discord BOT Dashboard and information about "<%=client.user.username%>"</p>  
+                    <!-- grid row -->
+                    <div class="row">
+                      <!-- grid column -->
+                      <div class="col-lg-4">
+                        <!-- .card -->
+                        <div class="card bg-secondary">
+                          <div class="card-header"> 🎉 Welcome</div><!-- .card-body -->
+                          <div class="card-body">
+                            <p class="card-text"> Welcome to Discord BOT Dashboard V2, this is an early version of the final product! Please report any issues you find!<br>
+                              <br>  
+                              <strong>Version: <%=Currentversion%></strong>
+                            </p>
+                          </div><!-- /.card-body -->
+                        </div><!-- /.card -->
+                      </div><!-- /grid column -->        
+                       <!-- grid column -->
+                      <div class="col-lg-4">
+                        <!-- .card -->
+                        <div class="card bg-secondary">
+                          <div class="card-header"> 🔎 <%=client.user.username%> - Details</div><!-- .card-body -->
+                          <div class="card-body">
+                            <ul>
+                              <li><strong>Username:</strong> <%=client.user.username%>#<%=client.user.discriminator%></li>
+                              <li><strong>Client ID:</strong> <%=client.user.id%></li>
+                              <li><strong>Joined:</strong> <%=joinedDate%></li>
+                            </ul>
+                            </p>
+                          </div><!-- /.card-body -->
+                        </div><!-- /.card -->
+                      </div><!-- /grid column -->
+                      <!-- grid column -->
+                      <div class="col-lg-4">
+                        <!-- .card -->
+                        <div class="card bg-secondary">
+                          <div class="card-header"> 📢 News</div><!-- .card-body -->
+                          <div class="card-body">
+                            <p class="card-text"><strong>Changelog:</strong>
+                              <ul>
+                                <li>Added Authentication</li>
+                              </ul>
+                            </p>
+                          </div><!-- /.card-body -->
+                        </div><!-- /.card -->
+                      </div><!-- /grid column -->                
+              </div><!-- /.page-section -->
+            </div><!-- /.page-inner -->
+          </div><!-- /.page -->
+        </div><!-- .app-footer -->
+        <footer class="app-footer">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://twitter.com/LachlanDev" target="_blank">Twitter</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://github.com/LachlanDev" target="_blank">GitHub</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://www.instagram.com/lachlanDev/" target="_blank">Instagram</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://discord.com/invite/w7B5nKB" target="_blank">Discord Server</a>
+            </li>
+          </ul>
+          <div class="copyright">Discord BOT Dashboard V2 - LachlanDev#8014 </div>
+        </footer><!-- /.app-footer -->
+        <!-- /.wrapper -->
+      </main><!-- /.app-main -->
+    </div><!-- /.app -->
+    <!-- BEGIN BASE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../home/assets/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> 
+    <!-- END BASE JS -->
+    <!-- BEGIN THEME JS -->
+    <script src="../home/assets/javascript/theme.min.js"></script> 
+    <!-- END THEME JS -->
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on('uptime', function(data){
+        $('#uptime').html(data.uptime);
+      });
+    </script>
+</html>
