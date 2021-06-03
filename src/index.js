@@ -46,9 +46,7 @@ app.use('/', require('./routes/guilds.js'));
 
 app.use('/login', require('./routes/login.js'));
 
-http.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+http.listen(port)
 
 io.sockets.on('connection', function(sockets){
   setInterval(function(){ 
