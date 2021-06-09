@@ -43,6 +43,7 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/home.js'));
 app.use('/', require('./routes/settings.js'));
 app.use('/', require('./routes/guilds.js'));
+app.use('/', require('./routes/support.js'));
 
 app.use('/login', require('./routes/login.js'));
 
