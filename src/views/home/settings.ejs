@@ -113,7 +113,9 @@
                     <div class="card-body">
                       <p class="card-text"> Important information about the Discord BOT Dashboard V2 version you are running!<br>
                       </p>       
-                      <p><strong>Version:</strong> <%=version.ver%></p>   
+                      <p><strong>Version:</strong> <%=version.ver%></p>
+                      <p><strong>Created By:</strong> LachlanDev#8014</p>
+   
                   </div>
             </div>
         </div>
@@ -140,18 +142,4 @@
     <script src="../home/assets/vendor/popper-js/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> 
     <script src="../home/assets/javascript/theme.min.js"></script> 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-      socket.on('uptime', function(data){
-        $('#uptime').html(data.uptime);
-      });
-    </script>
-    <script>
-      window.setTimeout(function() {
-          $(".alert").fadeTo(500, 0).slideUp(500, function(){
-              $(this).remove(); 
-          });
-      }, 4000);
-  </script>
 </html>
