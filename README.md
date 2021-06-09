@@ -9,3 +9,49 @@ Discord BOT Dashboard V2 is the successor of <a href="https://github.com/Lachlan
 
 # Dashboard Preview:
 <img src="./content/dashprev.JPG">
+
+## 🚀 Installation / Setup
+Head over to the Wiki to find all the instructions for setting up and running Discord BOT Dashboard V2. This can be found [here!](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/wiki) 
+#### ⌚ Installing Requirements
+Download the latest version from [Releases](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/releases), open up the root directory and run the following command.
+```bash
+npm install
+```
+
+#### 🖥️ Setting up BOT
+Rename ``config.default.json`` to ``config.json`` and open up the file, this can be found found in the **cfg** folder and input the required fields. More info on these fields can be found on the Wiki page [here!](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/wiki)
+```json
+{
+    "clientID":"BOTclientID",
+    "clientSecret":"BOTclientSecret",
+    "callbackURL":"BOTcallbackURL",
+    "Admin":["userAdminID"],
+    "token":"BOTtoken",
+    "prefix":"-"
+}
+```
+Make sure to enable both "Privileged Gateway Intents" on the [**Discord Developer Dashboard**](https://discord.com/developers). This is to fix errors  with "Kick / Ban" Commands!
+
+#### 📡 Starting the application 
+Open up the root directory and run the following command.
+```bash
+node index.js
+```
+You should now be able to access the dashboard at **http://localhost:3000**.
+
+## 💡 Contribute
+If you would like to contribute to the project please open a PR (Pull Request) clearly showing your changes.
+
+## 🔒 Requirements
+* [Node.JS](https://nodejs.org/en/) (v12.3.1 or later)
+
+## 📞 Issues
+If you have any issues feel free to open an issue or join the [Discord Server.](https://discord.com/invite/w7B5nKB)
+
+## 🧲 Extra
+__Created by LachlanDev#8014__
+* [Website](https://lachlan-dev.com)
+* [Twitter](https://twitter.com/LachlanDev)
+* [Instagram](https://www.instagram.com/LachlanDev/)
+* [Discord Server](https://discord.com/invite/w7B5nKB)
+</br>
