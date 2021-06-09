@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Settings | <%=client.user.username%> </title>
+    <title> Guilds | <%=client.user.username%> </title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -152,18 +152,4 @@
     <script src="../home/assets/vendor/popper-js/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> 
     <script src="../home/assets/javascript/theme.min.js"></script> 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-      socket.on('uptime', function(data){
-        $('#uptime').html(data.uptime);
-      });
-    </script>
-    <script>
-        window.setTimeout(function() {
-            $(".alert").fadeTo(500, 0).slideUp(500, function(){
-                $(this).remove(); 
-            });
-        }, 4000);
-    </script>
 </html>
