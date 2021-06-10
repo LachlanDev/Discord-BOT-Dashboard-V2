@@ -14,7 +14,7 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true,limit: '5mb' }));
 
-require('./config/passport')(passport);
+require('./auth/passport')(passport);
 
 
 // Express session
