@@ -10,16 +10,6 @@ Discord BOT Dashboard V2 is the successor of <a href="https://github.com/Lachlan
 # Dashboard Preview:
 <img src="./content/dashprev.JPG">
 
-## 🧰 Features
-A list of some of the features that are included in Discord BOT Dashboard V2
-* 🔐 **Authentication** - Discord BOT Dashboard is locked with a seccure authentication method that only allows users who are added into the config file to access the dashboard.
-* 🔒 **Security** - Discord BOT Dashbaord ensures that your application is seccure.
-* 💎 **Modern UI** - Discord BOT Dashboard is built with a modern UI to ensure its ease of use for anyone.
-* 🖥️ **Open Source** - Discord BOT Dashboard is an open source project meaning anyone can contribute to make it even better.
-* 🔌 **Stability** - Running your application using Discord BOT Dashboard ensures that it is stable and you wont have any errors.
-* ⏲️ **24/7 Uptime** - Running you application using Discord BOT Dashboard allows you to have 24/7 uptime.
-* ⛏️ **Multiple Tools** - Discord BOT Dashboard is packed with multiple tools that are easy to use.
-
 ## 🚀 Installation / Setup
 Head over to the Wiki to find all the instructions for setting up and running Discord BOT Dashboard V2. This can be found [here!](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/wiki) 
 #### ⌚ Installing Requirements
@@ -48,6 +38,16 @@ Open up the root directory and run the following command.
 node index.js
 ```
 You should now be able to access the dashboard at **http://localhost:3000**.
+
+## 🧰 Features
+A list of some of the features that are included in Discord BOT Dashboard V2
+* 🔐 **Authentication** - Discord BOT Dashboard is locked with a seccure authentication method that only allows users who are added into the config file to access the dashboard.
+* 🔒 **Security** - Discord BOT Dashbaord ensures that your application is seccure.
+* 💎 **Modern UI** - Discord BOT Dashboard is built with a modern UI to ensure its ease of use for anyone.
+* 🖥️ **Open Source** - Discord BOT Dashboard is an open source project meaning anyone can contribute to make it even better.
+* 🔌 **Stability** - Running your application using Discord BOT Dashboard ensures that it is stable and you wont have any errors.
+* ⏲️ **24/7 Uptime** - Running you application using Discord BOT Dashboard allows you to have 24/7 uptime.
+* ⛏️ **Multiple Tools** - Discord BOT Dashboard is packed with multiple tools that are easy to use.
 
 ## 💡 Contribute
 If you would like to contribute to the project please open a PR (Pull Request) clearly showing your changes.
