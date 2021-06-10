@@ -19,7 +19,7 @@ npm install
 ```
 
 #### 🖥️ Setting up BOT
-Rename ``config.default.json`` to ``config.json`` and open up the file, this can be found found in the **cfg** folder and input the required fields. More info on these fields can be found on the Wiki page [here!](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/wiki)
+Rename ``config.default.json`` to ``config.json`` and open up the file, this can be found found in the **config** folder and input the required fields. More info on these fields can be found on the Wiki page [here!](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/wiki)
 ```json
 {
     "clientID":"BOTclientID",
