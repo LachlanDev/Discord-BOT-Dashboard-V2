@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const discord = require('../bot')
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+const { ensureAuthenticated, forwardAuthenticated } = require('../auth/auth');
 const config = require('../config/config.json')
 const version = require('../config/version.json')
 

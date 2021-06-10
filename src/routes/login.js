@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const discord = require('../bot')
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+const { ensureAuthenticated, forwardAuthenticated } = require('../auth/auth');
 const passport = require('passport');
 
 router.get('/', forwardAuthenticated, (req, res) => {

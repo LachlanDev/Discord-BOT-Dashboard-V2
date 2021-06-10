@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+const { ensureAuthenticated, forwardAuthenticated } = require('../auth/auth');
 const discord = require('../bot')
 const dateformat = require('dateformat')
 const number = require('easy-number-formatter')
