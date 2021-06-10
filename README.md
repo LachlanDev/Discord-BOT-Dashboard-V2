@@ -10,6 +10,16 @@ Discord BOT Dashboard V2 is the successor of <a href="https://github.com/Lachlan
 # Dashboard Preview:
 <img src="./content/dashprev.JPG">
 
+## 🧰 Features
+A list of some of the features that are included in Discord BOT Dashboard V2
+* 🔐 **Authentication** - Discord BOT Dashboard is locked with a seccure authentication method that only allows users who are added into the config file to access the dashboard.
+* 🔒 **Security** - Discord BOT Dashbaord ensures that your application is seccure.
+* 💎 **Modern UI** - Discord BOT Dashboard is built with a modern UI to ensure its ease of use for anyone.
+* 🖥️ **Open Source** - Discord BOT Dashboard is an open source project meaning anyone can contribute to make it even better.
+* **Stability** - 
+* **24/7 Uptime** - 
+* **Multiple Tools** - 
+
 ## 🚀 Installation / Setup
 Head over to the Wiki to find all the instructions for setting up and running Discord BOT Dashboard V2. This can be found [here!](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/wiki) 
 #### ⌚ Installing Requirements
