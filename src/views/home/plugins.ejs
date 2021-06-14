@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Plugins | <%=client.user.username%> </title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js">
+    <link rel="stylesheet" href="../home/assets/stylesheets/theme-dark.min.css" data-skin="default">
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header app-header-dark">
+        <div class="top-bar">
+          <div class="top-bar-brand">
+            <h5>Discord BOT Dashboard</h5>
+          </div>
+          <div class="top-bar-list">
+            <div class="top-bar-item px-2 d-md-none d-lg-none d-xl-none">
+              <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="toggle menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle menu -->
+            </div>
+            <div class="top-bar-item top-bar-item-right px-0 d-none d-sm-flex">
+              <div class="dropdown d-none d-md-flex">
+                <button class="btn-account" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user-avatar user-avatar-md"><img src="https://cdn.discordapp.com/avatars/<%= profile.id %>/<%= profile.avatar %>" alt=""></span> <span class="account-summary pr-lg-4 d-none d-lg-block"><span class="account-name"><%= profile.username %></span> <span class="account-description">Admin</span></span></button> <!-- .dropdown-menu -->
+                <div class="dropdown-menu">
+                  <div class="dropdown-arrow d-lg-none" x-arrow=""></div>
+                  <div class="dropdown-arrow ml-3 d-none d-lg-block"></div>
+                  <h6 class="dropdown-header d-none d-md-block d-lg-none"> <%= profile.username %> </h6><a class="dropdown-item" href="/logout"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="app-aside app-aside-expand-md app-aside-light">
+        <div class="aside-content">
+          <header class="aside-header d-block d-md-none">
+            <button class="btn-account" type="button" data-toggle="collapse" data-target="#dropdown-aside"><span class="user-avatar user-avatar-lg"><img src="https://cdn.discordapp.com/avatars/<%= profile.id %>/<%= profile.avatar %>" alt=""></span> <span class="account-icon"><span class="fa fa-caret-down fa-lg"></span></span> <span class="account-summary"><span class="account-name"><%= profile.username %></span> <span class="account-description">Admin</span></span></button> <!-- /.btn-account -->
+            <div id="dropdown-aside" class="dropdown-aside collapse">
+              <div class="pb-3">
+                <a class="dropdown-item" href="/logout"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+              </div>
+            </div>
+          </header>
+          <div class="aside-menu overflow-hidden">
+            <nav id="stacked-menu" class="stacked-menu">
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="/" class="menu-link"><span class="menu-icon fas fa-home"></span> <span class="menu-text">Dashboard</span></a>
+                </li>
+                <li class="menu-item has-active">
+                  <a href="/plugins" class="menu-link"><span class="menu-icon fas fa-rocket"></span> <span class="menu-text">Plugins</span></a>
+                </li>
+                <li class="menu-item">
+                  <a href="/guilds" class="menu-link"><span class="menu-icon fas fa-server"></span> <span class="menu-text">Guilds</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="/support" class="menu-link"><span class="menu-icon fas fa-question-circle"></span> <span class="menu-text">Support</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="/settings" class="menu-link"><span class="menu-icon fas fa-cog"></span> <span class="menu-text">Settings</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </aside>
+      <main class="app-main">
+        <div class="wrapper">
+          <div class="page">
+            <div class="page-inner">
+              <div class="page-section">
+                  <div class="section-block">
+                    <% if(success != ''){ %>
+                        <div class="alert alert-success has-icon alert-dismissible fade show">
+                          <button type="button" class="close" data-dismiss="alert">×</button>
+                          <div class="alert-icon">
+                            <span class="oi oi-flag"></span>
+                          </div>
+                          <h4 class="alert-heading"> Success! </h4>
+                          <p class="mb-0"><%=success%></p>
+                        </div>
+                    <% } %> 
+                    <h4>Plugins</h4>
+                    <p class="text-muted"> Configure and enable plugins that you would like to use!</p>
+                    <div class="row">
+                        <% commandName.forEach(function(commandName) { %>
+                        <% if (!commandName.endsWith(".js")) return; { %>
+                        <% } %>
+                        <% if (commandName.startsWith("index")) return; { %>
+                        <% } %>
+                        <div class="col-lg-4">
+                          <div class="card">
+                            <% if (commands[commandName.split(".")[0]].details.icon) { %>
+                                <div class="card-header"><figure class="user-avatar user-avatar-lg"><img src="<%=commands[commandName.split(".")[0]].details.icon%>" alt=""></figure> <%=commands[commandName.split(".")[0]].details.name%></div>
+                                <% } %>
+                            <% if (!commands[commandName.split(".")[0]].details.icon) { %>
+                                    <div class="card-header"><figure class="user-avatar user-avatar-lg"><img src="https://www.online-tech-tips.com/wp-content/uploads/2019/09/discord.jpg.optimal.jpg" alt=""></figure> <%=commands[commandName.split(".")[0]].details.name%></div>
+                            <% } %>
+                            <div class="card-body">
+                              <p class="card-text"><strong>Developer:</strong> <%=commands[commandName.split(".")[0]].details.author %> </p>
+                              <p class="card-text"><strong>Description:</strong> <%=commands[commandName.split(".")[0]].details.description %> </p>
+                              <p class="card-text"><strong>Usage:</strong> <%=commands[commandName.split(".")[0]].details.usage %></p>
+
+                            </div>
+                              <div class="card-footer-item"><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalAlertDanger">Remove</a></div>
+                          </div>
+                        </div>
+                        <% }); %>
+                      </div>
+                </div>
+            </div>
+        <footer class="app-footer">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://twitter.com/LachlanDev" target="_blank">Twitter</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://github.com/LachlanDev" target="_blank">GitHub</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://www.instagram.com/lachlanDev/" target="_blank">Instagram</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="https://discord.com/invite/w7B5nKB" target="_blank">Discord Server</a>
+            </li>
+          </ul>
+          <div class="copyright">Discord BOT Dashboard V2 - LachlanDev#8014 </div>
+        </footer>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../home/assets/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> 
+    <script src="../home/assets/javascript/theme.min.js"></script> 
+</html>
