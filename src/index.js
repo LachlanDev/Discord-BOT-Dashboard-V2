@@ -3,6 +3,7 @@ const discord = require('./bot')
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const fileUpload = require('express-fileupload');
 
 const app = express();
 const http = require('http').Server(app);
@@ -13,6 +14,7 @@ port = 3000;
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true,limit: '5mb' }));
+app.use(fileUpload());
 
 require('./auth/passport')(passport);
 
