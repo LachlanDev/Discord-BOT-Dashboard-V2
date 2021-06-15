@@ -48,6 +48,7 @@ A list of some of the features that are included in Discord BOT Dashboard V2
 * 🔌 **Stability** - Running your application using Discord BOT Dashboard ensures that it is stable and you wont have any errors.
 * ⏲️ **24/7 Uptime** - Running you application using Discord BOT Dashboard allows you to have 24/7 uptime.
 * ⛏️ **Multiple Tools** - Discord BOT Dashboard is packed with multiple tools that are easy to use.
+* 🔌 **Plugins** - Develop and share plugins that can be imported into your project.
 
 ## 💡 Contribute
 If you would like to contribute to the project please open a PR (Pull Request) clearly showing your changes.
