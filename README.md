@@ -42,7 +42,7 @@ You should now be able to access the dashboard at **http://localhost:3000**.
 ## 🧰 Features
 A list of some of the features that are included in Discord BOT Dashboard V2
 * 🔐 **Authentication** - Discord BOT Dashboard is locked with a seccure authentication method that only allows users who are added into the config file to access the dashboard.
-* 🔒 **Security** - Discord BOT Dashbaord ensures that your application is seccure.
+* 🔒 **Security** - Discord BOT Dashbaord ensures that your application is secure.
 * 💎 **Modern UI** - Discord BOT Dashboard is built with a modern UI to ensure its ease of use for anyone.
 * 🖥️ **Open Source** - Discord BOT Dashboard is an open source project meaning anyone can contribute to make it even better.
 * 🔌 **Stability** - Running your application using Discord BOT Dashboard ensures that it is stable and you wont have any errors.
