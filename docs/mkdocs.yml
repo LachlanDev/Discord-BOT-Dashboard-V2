@@ -1,0 +1,4 @@
+site_name: DBD - Documentation 
+site_url: https://dbd.lachlan-dev.com/
+theme:
+  name: material
