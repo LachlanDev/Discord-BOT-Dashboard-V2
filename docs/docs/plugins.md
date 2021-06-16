@@ -19,7 +19,7 @@ module.exports.details = {
     name:'Ping',
     author:'LachlanDev#8014',
     icon:'URL',
-    description:'help command description',
+    description:'ping command description',
     usage:`${prefix.prefix}ping`
 }
 ```
