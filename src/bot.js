@@ -4,6 +4,7 @@ const fs = require("fs");
 
 const client = new Discord.Client();
 const config = require('./config/config.json')
+const settings = require('./config/settings.json')
 client.commands = new Enmap();
 chalk = require('chalk');
 client.config = config;
@@ -24,6 +25,7 @@ fs.readdir("./events/", (err, files) => {
 
 client.commands = new Enmap();
 
+
 fs.readdir("./commands/", (err, files) => {
   console.log(chalk.red('Loading Commands...'))
   if (err) return console.error(err);
@@ -31,6 +33,7 @@ fs.readdir("./commands/", (err, files) => {
     if (!file.endsWith(".js")) return;
     let props = require(`./commands/${file}`);
     let commandName = file.split(".")[0];
+    if (settings.includes(commandName)) return;
     console.log(chalk.green(`[+] ${commandName}`));
     client.commands.set(commandName, props);
   });
