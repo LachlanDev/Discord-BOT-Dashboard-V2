@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) =>{
     .addField("ID",`${member.user.id}`,true)
     .addField("Account Creation", dateformat(`${member.user.createdAt}`, 'dddd, mmmm dS, yyyy'))
     .addField("Joined Server", dateformat(`${member.joinedAt}`, 'dddd, mmmm dS, yyyy'))
-      .addField('Roles:', member.roles.cache.map(r => `${r}`).join(' | ').replace('@everyone',''), true)
+    .addField('Roles:', member.roles.cache.map(r => `${r}`).join(' | ').replace('@everyone',''), true)
     .setFooter("Made by LachlanDev#8014", "https://cdn.discordapp.com/avatars/365350852967399454/ce6e6e91fa887aa86e23ef356c9878fe")
     message.channel.send({embed: info })
 }
