@@ -14,6 +14,7 @@ module.exports.run = (client, message, args) =>{
     .addField("Server Region", `${message.guild.region}`)
     .addField("Member Count", `${number.formatNumber(message.guild.memberCount)}`)
     .addField("Creation Date", dateformat(`${message.guild.createdAt}`, 'dddd, mmmm dS, yyyy'))
+    .setFooter("Made by LachlanDev#8014", "https://cdn.discordapp.com/avatars/365350852967399454/ce6e6e91fa887aa86e23ef356c9878fe")
     message.channel.send({embed:info})
 }
 
