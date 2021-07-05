@@ -5,8 +5,6 @@ const discord = require('../bot')
 const dateformat = require('dateformat')
 const number = require('easy-number-formatter')
 
-// Do number format for user count !
-
 router.get('/guilds',ensureAuthenticated,(req,res) =>{
     let guilds = discord.client.guilds.cache.array()
     res.render('home/guilds',{
