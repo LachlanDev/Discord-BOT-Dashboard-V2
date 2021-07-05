@@ -14,6 +14,7 @@ module.exports = (client, message) => {
   
     // If that command doesn't exist, silently exit and do nothing
     if (!cmd) return;
+    if (message.content == client.config.prefix+'index') return;
   
     // Run the command
     cmd.run(client, message, args);
