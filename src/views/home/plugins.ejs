@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js">
     <link rel="stylesheet" href="../home/assets/stylesheets/theme-dark.min.css" data-skin="default">
+    <link rel="stylesheet" href="../home/assets/stylesheets/plugins.css">
   </head>
   <body>
     <div class="app">
@@ -95,7 +96,8 @@
                   <% } %> 
                     <h4>Plugins</h4>
                     <p class="text-muted"> Configure and enable plugins that you would like to use!</p>
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalAlertDanger">Import</button>
+                    <p class="text-muted"><strong>NOTE: When importing/removing or enabling/disabling plugins you will require to restart Discord BOT Dashboard for changes to take effect!</strong></p>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#upload">Import</button>
                     </div>
                     <div class="row">
                         <% commandName.forEach(function(commandName) { %>
@@ -117,18 +119,62 @@
                               <p class="card-text"><strong>Developer:</strong> <%=commands[commandName.split(".")[0]].details.author %> </p>
                               <p class="card-text"><strong>Description:</strong> <%=commands[commandName.split(".")[0]].details.description %> </p>
                               <p class="card-text"><strong>Usage:</strong> <%=commands[commandName.split(".")[0]].details.usage %></p>
-
+                              <% if (commandsToggle.includes(commandName.split(".")[0])) { %>
+                              <div class="blocktext">
+                                <form id="myForm" action="/plugins/toggle" method="post">
+                                  <input type="hidden" name="toggle" value="true">
+                                  <input type="hidden" name='commandName' value=<%=commandName.split(".")[0]%>>
+                                  <label class="switch">
+                                    <input type="checkbox" value="false" name="toggles" onclick="submit()" id="toggles">
+                                    <span class="slider round"></span>
+                                  </label>
+                                </form>
+                              </div>
+                              <% } %>
+                              <% if (!commandsToggle.includes(commandName.split(".")[0])) { %>
+                                <div class="blocktext">
+                                  <form id="myForm" action="/plugins/toggle" method="post">
+                                    <input type="hidden" name="toggle" value="false">
+                                    <input type="hidden" name='commandName' value=<%=commandName.split(".")[0]%>>
+                                    <label class="switch">
+                                      <input type="checkbox" value="true" name="toggles" onclick="submit()" id="toggles" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                  </form>
+                                </div>
+                                <% } %>
                             </div>
-                              <div class="card-footer-item"><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalAlertDanger">Remove</a></div>
+                              <div class="card-footer-item"><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#<%=commandName.split(".")[0]%>">Remove</a></div>
                           </div>
                         </div>
-                        <% }); %>
-
-                        <div class="modal modal-alert fade" id="exampleModalAlertDanger" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalAlertDangerLabel" aria-hidden="true">
+                        <!-- Remove Modal -->
+                        <div class="modal modal-alert fade" id="<%=commandName.split('.')[0]%>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="<%=commandName.split('.')[0]%>Label" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 id="exampleModalAlertDangerLabel" class="modal-title">
+                                <h5 id="<%=commandName.split('.')[0]%>Label" class="modal-title">
+                                  <i class="far fa-trash-alt text-warning mr-1"></i> Remove Plugin</h5>
+                              </div>
+                              <div class="modal-body">
+                                <p> Are you sure you want to remove the plugin <strong><%=commandName.split('.')[0]%></strong>? This cannot be undone!</p>
+                              <div class="modal-footer">
+                                <form action="/plugins/remove/<%=commandName%>" method="POST">
+                                  <button type="button" class="btn btn-warning" onclick="submit()">Remove</button>                               
+                              </form>
+                              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Modal End -->
+                      </div>
+                        <% }); %>
+                        <!-- Import Modal -->
+                        <div class="modal modal-alert fade" id="upload" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="uploadLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 id="uploadLabel" class="modal-title">
                                   <i class="fa fa-file-import text-success mr-1"></i> Plugin Import</h5>
                               </div>
                               <div class="modal-body">
