@@ -21,7 +21,6 @@ router.get('/settings', ensureAuthenticated,(req, res) => {
 })
 
 router.post('/settings/config',ensureAuthenticated,(req,res) =>{
-    // Need to add ADMIN
     json.update('./config/config.json',{clientID:`${req.body.clientID}`,clientSecret:`${req.body.clientSecret}`,callbackURL:`${req.body.callbackURL}`,Admin:req.body.admin.split(','),token:`${req.body.token}`,prefix:`${req.body.prefix}`}).then(function(dat) { 
         req.flash('success', 'Config Updated please now restart the application!')
         res.redirect('/settings')
