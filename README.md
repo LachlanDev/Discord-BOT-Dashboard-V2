@@ -3,7 +3,7 @@
     <p>Discord BOT Dashboard - V2</p>
 <img src="./content/headerimage.png">
     
-[![Github all releases](https://img.shields.io/github/downloads/LachlanDev/Discord-BOT-Dashboard-V2/total.svg?style=for-the-badge)](https://GitHub.com/LachlanDev/Discord-BOT-Dashboard-V2/releases/) [![DiscordServer](https://img.shields.io/discord/587842272167723028?label=Discord%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white)](https://discord.com/invite/w7B5nKB)
+[![Github all releases](https://img.shields.io/github/downloads/LachlanDev/Discord-BOT-Dashboard-V2/total.svg?style=for-the-badge)](https://GitHub.com/LachlanDev/Discord-BOT-Dashboard-V2/releases/) [![GitHub release](https://img.shields.io/github/release/LachlanDev/Discord-BOT-Dashboard-V2.svg?style=for-the-badge)](https://GitHub.com/LachlanDev/Discord-BOT-Dashboard-V2/releases/) [![GitHub issues](https://img.shields.io/github/issues/LachlanDev/Discord-BOT-Dashboard-V2.svg?style=for-the-badge)](https://GitHub.com/LachlanDev/Discord-BOT-Dashboard-V2/issues/) [![DiscordServer](https://img.shields.io/discord/587842272167723028?label=Discord%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white)](https://discord.com/invite/w7B5nKB)
 
 
 </h1>
