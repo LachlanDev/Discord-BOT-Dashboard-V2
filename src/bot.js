@@ -30,12 +30,16 @@ if (isDocker()) {
     console.log('prefix not set, exiting');
     process.exit(1);
   }else{
-    fs.rename('./config/config.default.json', './config/config.json', function(err) {
+    if (!fs.existsSync('./config/config.json')) {
+      fs.rename('./config/config.default.json', './config/config.json', function(err) {
         if ( err ) console.log('ERROR: ' + err);
     });
     json.update('./config/config.json',{clientID:`${process.env.clientID}`,clientSecret:`${process.env.clientSecret}`,callbackURL:`${process.env.callBackURL}`,Admin:process.env.admin.split(','),token:`${process.env.token}`,prefix:`${process.env.prefix}`}).then(function(dat) { 
-      console.log("Config Updated inside docker container!");
+      console.clear()
+      console.log("Config Updated Please restart Docker Container!");
+      process.exit(1);
     })
+    }
   }
 }
 
