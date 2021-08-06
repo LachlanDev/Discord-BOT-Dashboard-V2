@@ -1,4 +1,3 @@
-# Welcome
 <h1 align="center">
     <p>Discord BOT Dashboard - V2</p>
 </h1>
