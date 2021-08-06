@@ -5,3 +5,9 @@ theme:
   theme:
   palette:
     scheme: slate
+nav:
+    - Home: 'index.md'
+    - 'Installation':
+        - 'Locally': 'installation/basic.md'
+        - 'Docker': 'installation/docker.md'
+    - Creating Plugins: 'plugins.md'
