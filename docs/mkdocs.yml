@@ -2,6 +2,7 @@ site_name: DBD - Documentation
 site_url: https://dbd.lachlan-dev.com/
 theme:
   name: material
+  custom_dir: overrides
   theme:
   palette:
     scheme: slate
@@ -11,3 +12,4 @@ nav:
         - 'Locally': 'installation/basic.md'
         - 'Docker': 'installation/docker.md'
     - Creating Plugins: 'plugins.md'
+plugins: []
