@@ -66,3 +66,8 @@ io.sockets.on('connection', function(sockets){
     // Emit count to browser 
     sockets.emit('uptime',{uptime:BOTuptime}); }, 1000);
 })
+
+// Error Pages
+app.use(function(req,res){
+  res.status(404).render('error_pages/404');
+});
