@@ -19,6 +19,6 @@ module.exports = (client) => {
     console.log(chalk.magenta('Made by:'),chalk.cyan('LachlanDev#8014'))
     console.log(chalk.magenta('Prefix:'),chalk.cyan(`${config.prefix}\n`))
     console.log(chalk.green(chalk.bold(`${discord.client.user.username}`),`is online!`))
-    console.log(chalk.green(chalk.bold(`Dashboard:`),`http://localhost:3000`))
+    console.log(chalk.green(chalk.bold(`Dashboard:`),`http://localhost:`+config.port))
 
 }
