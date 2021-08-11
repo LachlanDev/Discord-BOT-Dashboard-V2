@@ -31,7 +31,8 @@ Rename ``config.default.json`` to ``config.json`` and open up the file, this can
     "callbackURL":"BOTcallbackURL",
     "Admin":["userAdminID"],
     "token":"BOTtoken",
-    "prefix":"-"
+    "prefix":"-",
+    "port":"3000"
 }
 ```
 Make sure to enable both "Privileged Gateway Intents" on the [**Discord Developer Dashboard**](https://discord.com/developers). This is to fix errors  with "Kick / Ban" Commands!
