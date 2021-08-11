@@ -16,7 +16,7 @@ router.get('/', ensureAuthenticated,(req,res) =>{
 router.get('/home', ensureAuthenticated,(req, res) => {
     var options = {
         method: 'GET',
-        url: `https://lachlan-dev.com/version/dbdv2.txt`,
+        url: `https://raw.githubusercontent.com/LachlanDev/Discord-BOT-Dashboard-V2/main/src/config/version.json`,
         headers: {
           'User-Agent': 'Discord-Bot-Dashboard',
           useQueryString: true
