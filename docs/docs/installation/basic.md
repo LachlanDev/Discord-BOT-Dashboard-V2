@@ -18,7 +18,8 @@ Rename ``config.default.json`` to ``config.json`` and open up the file, this can
     "callbackURL":"BOTcallbackURL",
     "Admin":["userAdminID"],
     "token":"BOTtoken",
-    "prefix":"-"
+    "prefix":"-",
+    "port":"3000"
 }
 ```
 
@@ -28,6 +29,7 @@ Rename ``config.default.json`` to ``config.json`` and open up the file, this can
 * **``Admin``** - This is the Client ID of your Discord account used to authenticate in the login process. Multiple admins can be added ``["userAdminID","userAdminID2"]`` 
 * **``token``** - This is the Token for your BOT used to login to Discord.
 * **``prefix``** - Is what we will use to call for commands.
+* **``port``** - Is port that will be used to access the dashboard! Ensure you change the port on your OAuth2 url.
 </br>
 </br>
 
@@ -40,7 +42,8 @@ Open up the root directory and run the following command.
 ```bash
 node index.js
 ```
-You should now be able to access the dashboard at <a href="http://localhost:3000">http://localhost:3000</a>
+You should now be able to access the dashboard at <a href="http://localhost:3000">http://localhost:3000</a> or the port you chose to use.
 
 </br>
+
 If you ran into any errors or need any further help feel free to ask in the [Discord Server](https://discord.com/invite/w7B5nKB)
