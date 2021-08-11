@@ -7,7 +7,8 @@ ENV clientID= \
     callBackURL= \
     admin= \
     token= \
-    prefix= 
+    prefix= \
+    port=
 
 ADD src .
 
@@ -17,4 +18,4 @@ RUN npm install
 
 EXPOSE 3000
 
-CMD clientID=$clientID clientSecret=$clientSecret callBackURL=$callBackURL admin=$admin token=$token prefix=$prefix node index.js
+CMD clientID=$clientID clientSecret=$clientSecret callBackURL=$callBackURL admin=$admin token=$token prefix=$prefix port=$port node index.js
