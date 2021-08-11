@@ -1,9 +1,9 @@
 site_name: DBD - Documentation 
 site_url: https://dbd.lachlan-dev.com/
 theme:
+  favicon: assets/images/favicon.png
   name: material
   custom_dir: overrides
-  theme:
   palette:
     scheme: slate
 nav:
