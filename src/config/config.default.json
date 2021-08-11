@@ -4,5 +4,6 @@
     "callbackURL":"BOTcallbackURL",
     "Admin":["userAdminID"],
     "token":"BOTtoken",
-    "prefix":"-"
+    "prefix":"-",
+    "port":"3000"
 }
