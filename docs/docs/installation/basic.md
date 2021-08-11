@@ -1,7 +1,6 @@
 # Installation
 Installing Discord BOT Dashboard is a very simple and easy process
 
-
 #### ⌚ Installing Requirements
 Download the latest version from [Releases](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/releases), open up the root directory and run the following command.
 ```bash
@@ -43,7 +42,6 @@ Open up the root directory and run the following command.
 node index.js
 ```
 You should now be able to access the dashboard at <a href="http://localhost:3000">http://localhost:3000</a> or the port you chose to use.
-
 </br>
 
 If you ran into any errors or need any further help feel free to ask in the [Discord Server](https://discord.com/invite/w7B5nKB)
