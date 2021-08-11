@@ -11,5 +11,6 @@ nav:
     - 'Installation':
         - 'Locally': 'installation/basic.md'
         - 'Docker': 'installation/docker.md'
+    - Updating: 'update.md'
     - Creating Plugins: 'plugins.md'
 plugins: []
