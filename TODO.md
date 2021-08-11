@@ -16,3 +16,4 @@ A list of features that will be worked on and added to Discord BOT Dashboard. Ha
 - ❌ Reload application from dashboard or Reload commands
 - ❌ Categories for commands
 - ✅ Port config
+- ❌ Better Marketplace (Website)
