@@ -8,21 +8,35 @@ const version = require('../config/version.json')
 json = require('json-update');
 const jsonfile = require('jsonfile')
 const file = "./config/config.json"
+const themes = "./config/theme.json"
 
+const fs = require("fs");
 
 router.get('/settings', ensureAuthenticated,(req, res) => {
     var config = jsonfile.readFileSync(file);
+    var theme = jsonfile.readFileSync(themes);
+    fs.readdir("./themes/", (err, files) => {
     res.render('home/settings',{
         profile:req.user,
         client:discord.client,
         config:config,
-        version:version
+        version:version,
+        themeName:files,
+        theme:theme
+    })
     })
 })
 
 router.post('/settings/config',ensureAuthenticated,(req,res) =>{
     json.update('./config/config.json',{clientID:`${req.body.clientID}`,clientSecret:`${req.body.clientSecret}`,callbackURL:`${req.body.callbackURL}`,Admin:req.body.admin.split(','),token:`${req.body.token}`,prefix:`${req.body.prefix}`,port:`${req.body.port}`}).then(function(dat) { 
         req.flash('success', 'Config Updated please now restart the application!')
+        res.redirect('/settings')
+    })
+})
+
+router.post('/settings/dashboard',ensureAuthenticated,(req,res) =>{
+    json.update('./config/theme.json',{theme:`${req.body.theme}`}).then(function(dat) { 
+        req.flash('success', 'Theme Updated!')
         res.redirect('/settings')
     })
 })
