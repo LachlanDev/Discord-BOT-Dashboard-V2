@@ -8,7 +8,7 @@ A list of features that will be worked on and added to Discord BOT Dashboard. Ha
 
 ### List:
 - ✅ Theme support
-- ☑️ Theme upload button
+- ✅ Theme upload button
 - ☑️ Favicon upload
 - ❌ Update function inside dashboard
 - ❌ Guild invite button see #suggestions
