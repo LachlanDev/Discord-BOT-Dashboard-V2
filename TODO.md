@@ -7,7 +7,7 @@ A list of features that will be worked on and added to Discord BOT Dashboard. Ha
 * ✅ - Done
 
 ### List:
-- ☑️ Theme support
+- ✅ Theme support
 - ❌ Update function inside dashboard
 - ❌ Guild invite button see #suggestions
 - ☑️ Quick link to downloads page for plugins
