@@ -13,6 +13,7 @@ const io = require('socket.io')(http);
 port = config.port;
 
 app.use(express.static('./public'));
+app.use(express.static('./themes'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true,limit: '5mb' }));
 app.use(fileUpload());
