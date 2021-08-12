@@ -13,4 +13,5 @@ nav:
         - 'Docker': 'installation/docker.md'
     - Updating: 'update.md'
     - Creating Plugins: 'plugins.md'
+    - Creating Themes: 'themes.md'
 plugins: []
