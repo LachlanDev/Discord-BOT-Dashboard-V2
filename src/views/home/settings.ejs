@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js">
-    <link rel="stylesheet" href="../home/assets/stylesheets/theme-dark.min.css" data-skin="default">
+    <link rel="stylesheet" href="../<%=theme.theme%>" data-skin="default">
   </head>
   <body>
     <div class="app">
@@ -111,13 +111,34 @@
                         </div>
                   </div>
                   <div class="card bg-secondary">
+                    <div class="card-header"> 🎨 Dashboard Settings</div>
+                    <div class="card-body">
+                      <p class="card-text"> Customization options for your Dashboard!<br>
+                      </p>
+                      <form id="dashboard-form" action="/settings/dashboard" method="POST">
+                        <label for="admin"><strong>Theme:</strong></label><br>
+                        <div class="form-label-group">
+                          <select class="custom-select" id="theme" name="theme" form="dashboard-form">
+                            <option value=""> Choose... </option>
+                            <% themeName.forEach(function(themeName) { %>     
+                              <% if (!themeName.endsWith(".css")) return; %>\
+                              <option> <%=themeName%> </option>              
+                            <% }); %>
+                            <option selected="selected" hidden> <%=theme.theme%></option>
+                          </select> <label for="theme">Theme</label>
+                        </div>
+                        <br>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save">
+                      </form>
+                  </div>
+            </div>
+                  <div class="card bg-secondary">
                     <div class="card-header"> ⚙️ Build Info</div>
                     <div class="card-body">
                       <p class="card-text"> Important information about the Discord BOT Dashboard V2 version you are running!<br>
                       </p>       
                       <p><strong>Version:</strong> <%=version.ver%></p>
                       <p><strong>Created By:</strong> LachlanDev#8014</p>
-   
                   </div>
             </div>
         </div>
