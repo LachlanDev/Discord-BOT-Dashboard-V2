@@ -7,8 +7,10 @@ const fs = require("fs");
 const fileUpload = require('express-fileupload');
 const jsonfile = require('jsonfile')
 json = require('json-update');
+const themes = "./config/theme.json"
 
 router.get('/plugins', ensureAuthenticated,(req, res) => {
+  var theme = jsonfile.readFileSync(themes);
     const commandsToggle = jsonfile.readFileSync('./config/settings.json');
     fs.readdir("./commands/", (err, files) => {
     res.render('home/plugins',{
@@ -16,7 +18,8 @@ router.get('/plugins', ensureAuthenticated,(req, res) => {
         client:discord.client,
         commands:commands,
         commandName:files,
-        commandsToggle:commandsToggle
+        commandsToggle:commandsToggle,
+        theme:theme
     })
 })
 });

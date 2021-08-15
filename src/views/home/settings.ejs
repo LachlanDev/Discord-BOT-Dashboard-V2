@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js">
-    <link rel="stylesheet" href="../home/assets/stylesheets/theme-dark.min.css" data-skin="default">
+    <link rel="stylesheet" href="../<%=theme.theme%>" data-skin="default">
   </head>
   <body>
     <div class="app">
@@ -83,6 +83,16 @@
                         <p class="mb-0"><%=success%></p>
                       </div>
                   <% } %> 
+                  <% if(error != ''){ %>
+                    <div class="alert alert-warning has-icon alert-dismissible fade show">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                      <div class="alert-icon">
+                        <span class="fa fa-bullhorn"></span>
+                      </div>
+                      <h4 class="alert-heading"> Warning! </h4>
+                      <p class="mb-0"><%=error%></p>
+                    </div>
+                <% } %> 
                     <h4> Settings</h4>
                     <p class="text-muted"> Customize your BOT and update settings within the dashboard!</p>  
                         <div class="card bg-secondary">
@@ -111,16 +121,74 @@
                         </div>
                   </div>
                   <div class="card bg-secondary">
+                    <div class="card-header"> 🎨 Dashboard Settings</div>
+                    <div class="card-body">
+                      <p class="card-text"> Customization options for your Dashboard!<br>
+                      </p>
+                      <label for="admin"><strong>Import theme:</strong></label><br>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#upload">Import</button>
+                      <br>
+                      <br>
+                      <form id="dashboard-form" action="/settings/dashboard" method="POST">
+                        <label for="admin"><strong>Theme Select:</strong></label><br>
+                        <div class="form-label-group">
+                          <select class="custom-select" id="theme" name="theme" form="dashboard-form">
+                            <option value=""> Choose... </option>
+                            <% themeName.forEach(function(themeName) { %>     
+                              <% if (!themeName.endsWith(".css")) return; %>\
+                              <option> <%=themeName%> </option>              
+                            <% }); %>
+                            <option selected="selected" hidden> <%=theme.theme%></option>
+                          </select> <label for="theme">Theme</label>
+                        </div>
+                        <br>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save">
+                      </form>
+                  </div>
+            </div>
+                  <div class="card bg-secondary">
                     <div class="card-header"> ⚙️ Build Info</div>
                     <div class="card-body">
                       <p class="card-text"> Important information about the Discord BOT Dashboard V2 version you are running!<br>
                       </p>       
                       <p><strong>Version:</strong> <%=version.ver%></p>
                       <p><strong>Created By:</strong> LachlanDev#8014</p>
-   
                   </div>
             </div>
         </div>
+        <!-- Import Model -->
+        <div class="modal modal-alert fade" id="upload" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="uploadLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="uploadLabel" class="modal-title">
+                  <i class="fa fa-file-import text-success mr-1"></i> Theme Import</h5>
+              </div>
+              <div class="modal-body">
+                <p> Please select the theme css file you would like to import!</p>
+                <form ref='uploadForm' 
+                id='uploadForm' 
+                action='settings/upload/theme' 
+                method='post' 
+                encType="multipart/form-data">
+                <div class="d-flex justify-content-center">
+                  <label class="btn btn-warning">
+                    <input id="file-upload" type="file" name="sampleFile" hidden accept=".css" />
+                    <span><i class="fas fa-upload"></i> Upload File</span>
+                  </label>
+                </div>
+                <p class="text-center" id="file-name"></p>
+              </form
+              </div>
+              <div class="modal-footer">
+                  <button id="uploadButton" type="submit" form="uploadForm" value="Submit" class="btn btn-warning" hidden>Upload</button>                               
+                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- End Import Model -->
         <footer class="app-footer">
           <ul class="list-inline">
             <li class="list-inline-item">
@@ -144,4 +212,10 @@
     <script src="../home/assets/vendor/popper-js/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> 
     <script src="../home/assets/javascript/theme.min.js"></script> 
+    <script>
+      document.querySelector("#file-upload").onchange = function(){
+        document.querySelector("#file-name").textContent = this.files[0].name + " is ready for upload!";
+        document.getElementById("uploadButton").hidden = false;
+      }
+    </script>
 </html>

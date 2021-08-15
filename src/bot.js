@@ -1,47 +1,7 @@
 const Discord = require("discord.js");
 const Enmap = require("enmap");
 const fs = require("fs");
-const isDocker = require('is-docker');
 json = require('json-update');
-
-// Check if we are running in a docker container
-if (isDocker()) {
-  if(!process.env.clientID) { 
-    console.log('clientID not set, exiting');
-    process.exit(1);
-  }
-  else if(!process.env.clientSecret) { 
-    console.log('clientSecret not set, exiting');
-    process.exit(1);
-  }
-  else if(!process.env.callBackURL) { 
-    console.log('callBackURL not set, exiting');
-    process.exit(1);
-  }
-  else if(!process.env.admin) { 
-    console.log('admin not set, exiting');
-    process.exit(1);
-  }
-  else if(!process.env.token) { 
-    console.log('token not set, exiting');
-    process.exit(1);
-  }
-  else if(!process.env.prefix) { 
-    console.log('prefix not set, exiting');
-    process.exit(1);
-  }else{
-    if (!fs.existsSync('./config/config.json')) {
-      fs.rename('./config/config.default.json', './config/config.json', function(err) {
-        if ( err ) console.log('ERROR: ' + err);
-    });
-    json.update('./config/config.json',{clientID:`${process.env.clientID}`,clientSecret:`${process.env.clientSecret}`,callbackURL:`${process.env.callBackURL}`,Admin:process.env.admin.split(','),token:`${process.env.token}`,prefix:`${process.env.prefix}`}).then(function(dat) { 
-      console.clear()
-      console.log("Config Updated Please restart Docker Container!");
-      process.exit(1);
-    })
-    }
-  }
-}
 
 const client = new Discord.Client();
 const config = require('./config/config.json')

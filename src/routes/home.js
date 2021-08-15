@@ -8,12 +8,16 @@ const ver = require('../config/version.json')
 
 const number = require('easy-number-formatter')
 var request = require("request");
+const jsonfile = require('jsonfile')
+
+const themes = "./config/theme.json"
 
 router.get('/', ensureAuthenticated,(req,res) =>{
     res.redirect('/home')
 })
 
 router.get('/home', ensureAuthenticated,(req, res) => {
+  var theme = jsonfile.readFileSync(themes);
     var options = {
         method: 'GET',
         url: `https://raw.githubusercontent.com/LachlanDev/Discord-BOT-Dashboard-V2/main/src/config/version.json`,
@@ -41,7 +45,8 @@ router.get('/home', ensureAuthenticated,(req, res) => {
         prefix:config.prefix,
         number:number,
         Latestversion:verL,
-        Currentversion:ver.ver
+        Currentversion:ver.ver,
+        theme:theme
     })
     })
 })
