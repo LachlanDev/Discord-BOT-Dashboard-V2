@@ -8,9 +8,7 @@ theme:
     scheme: slate
 nav:
     - Home: 'index.md'
-    - 'Installation':
-        - 'Locally': 'installation/basic.md'
-        - 'Docker': 'installation/docker.md'
+    - Installation: 'installation/basic.md'
     - Updating: 'update.md'
     - Creating Plugins: 'plugins.md'
     - Creating Themes: 'themes.md'
