@@ -24,7 +24,10 @@ Rename ``config.default.json`` to ``config.json`` and open up the file, this can
 
 * **``clientID``** - This is the Client ID for your BOT, this can be found in the [Discord Developer Portal](https://discord.com/developers) or in the Discord Client.
 * **``clientSecret``** - This is the Client Secret for your BOT, this can be ONLY be found in the [Discord Developer Portal](https://discord.com/developers)
-* **``callbackURL``** - Head over to OAuth2 and create a redirect link. for example: ``http://localhost:3000/login/api`` Can change ``localhost`` for the IP of your system.
+* **``callbackURL``** - Head over to OAuth2 and create a redirect link. Please use: ``http://localhost:3000/login/api`` Can change ``localhost`` for the IP of your system.
+
+<img src="/assets/images/example_dbp.jpeg">
+
 * **``Admin``** - This is the Client ID of your Discord account used to authenticate in the login process. Multiple admins can be added ``["userAdminID","userAdminID2"]`` 
 * **``token``** - This is the Token for your BOT used to login to Discord.
 * **``prefix``** - Is what we will use to call for commands.
