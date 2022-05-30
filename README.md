@@ -70,4 +70,5 @@ __Created by LachlanDev#8014__
 * [Twitter](https://twitter.com/LachlanDev)
 * [Instagram](https://www.instagram.com/LachlanDev/)
 * [Discord Server](https://discord.com/invite/w7B5nKB)
+* [Marketplace](https://github.com/LachlanDev/Discord-BOT-Dashboard-Marketplace)
 </br>
