@@ -1,3 +1,5 @@
+<h1 align="center">⚠️ THIS PROJECT IS OUTDATED AND MAY NOT WORK ⚠️ </h1>
+
 <h1 align="center">
     <br>
     <p>Discord BOT Dashboard - V2</p>
