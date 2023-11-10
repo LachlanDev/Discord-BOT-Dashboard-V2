@@ -1,4 +1,4 @@
-<h1 align="center">⚠️ THIS PROJECT IS OUTDATED AND MAY NOT WORK ⚠️ </h1>
+<h2 align="center">⚠️ THIS PROJECT IS OUTDATED AND MAY NOT WORK ⚠️ </h2>
 
 <h1 align="center">
     <br>
