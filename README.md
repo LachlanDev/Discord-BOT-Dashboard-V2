@@ -67,7 +67,7 @@ A list of some of the features that are included in Discord BOT Dashboard V2
 If you would like to contribute to the project please open a PR (Pull Request) clearly showing your changes.
 
 ## 🔒 Requirements
-* [Node.JS](https://nodejs.org/en/) (v12.3.1 or later)
+* [Node.JS](https://nodejs.org/en/) (Node.js v20.16.0)
 
 ## 📞 Issues
 If you have any issues feel free to open an issue or join the [Discord Server.](https://discord.com/invite/w7B5nKB)
