@@ -14,17 +14,17 @@ Rename ``config.default.json`` to ``config.json`` and open up the file, this can
 {
     "clientID":"BOTclientID",
     "clientSecret":"BOTclientSecret",
-    "callbackURL":"BOTcallbackURL",
+    "callbackURL":"http://localhost:1337/login/api",
     "Admin":["userAdminID"],
     "token":"BOTtoken",
     "prefix":"-",
-    "port":"3000"
+    "port":"1337"
 }
 ```
 
 * **``clientID``** - This is the Client ID for your BOT, this can be found in the [Discord Developer Portal](https://discord.com/developers) or in the Discord Client.
 * **``clientSecret``** - This is the Client Secret for your BOT, this can be ONLY be found in the [Discord Developer Portal](https://discord.com/developers)
-* **``callbackURL``** - Head over to OAuth2 and create a redirect link. Please use: ``http://localhost:3000/login/api`` Can change ``localhost`` for the IP of your system.
+* **``callbackURL``** - Head over to OAuth2 and create a redirect link. Please use: ``http://localhost:1337/login/api`` Can change ``localhost`` for the IP of your system.
 
 <img src="/assets/images/example_dbp.jpeg">
 
@@ -44,7 +44,7 @@ Open up the root directory and run the following command.
 ```bash
 node index.js
 ```
-You should now be able to access the dashboard at <a href="http://localhost:3000">http://localhost:3000</a> or the port you chose to use.
+You should now be able to access the dashboard at <a href="http://localhost:1337">http://localhost:1337</a> or the port you chose to use.
 </br>
 
 If you ran into any errors or need any further help feel free to ask in the [Discord Server](https://discord.com/invite/w7B5nKB)
