@@ -1,4 +1,5 @@
-<h2 align="center">⚠️ THIS PROJECT IS OUTDATED AND MAY NOT WORK ⚠️ </h2>
+<h2 align="center">🎉 UPDATED TO LATEST DISCORD JS VERSION 🎉 </h2>
+<h4 align="center">Thank you to mrranger for bring the project back to life</h4>
 
 <h1 align="center">
     <br>
