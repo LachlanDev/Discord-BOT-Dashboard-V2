@@ -4,8 +4,10 @@
   "description": "Discord BOT Dashboard is made to make Discord BOT Development easy, designed to create applications without having to write a single line of code while using a user friendly Web-Dashboard!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LachlanDev/Discord-BOT-Dashboard-V2.git"
@@ -16,6 +18,9 @@
     "url": "https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/issues"
   },
   "homepage": "https://github.com/LachlanDev/Discord-BOT-Dashboard-V2#readme",
+  "devDependencies": {
+        "nodemon": "^2.0.12"
+    },
   "dependencies": {
     "circular-json": "^0.5.9",
     "connect-flash": "^0.1.1",
@@ -44,3 +49,4 @@
     "tough-cookie": "^5.0.0"
   }
 }
+
