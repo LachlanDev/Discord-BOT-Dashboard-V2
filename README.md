@@ -30,13 +30,19 @@ Rename ``config.default.json`` to ``config.json`` and open up the file, this can
 {
     "clientID":"BOTclientID",
     "clientSecret":"BOTclientSecret",
-    "callbackURL":"BOTcallbackURL",
+    "callbackURL":"http://localhost:1337/login/api",
     "Admin":["userAdminID"],
     "token":"BOTtoken",
     "prefix":"-",
     "port":"3000"
 }
+
 ```
+
+Redirects
+You must specify at least one URI for authentication to work. If you pass a URI in an OAuth request, it must exactly match one of the URIs you enter here.
+http://localhost:1337/login/api
+
 Make sure to enable both "Privileged Gateway Intents" on the [**Discord Developer Dashboard**](https://discord.com/developers). This is to fix errors  with "Kick / Ban" Commands!
 
 #### 📡 Starting the application 
@@ -61,7 +67,7 @@ A list of some of the features that are included in Discord BOT Dashboard V2
 If you would like to contribute to the project please open a PR (Pull Request) clearly showing your changes.
 
 ## 🔒 Requirements
-* [Node.JS](https://nodejs.org/en/) (v12.3.1 or later)
+* [Node.JS](https://nodejs.org/en/) (Node.js v20.16.0)
 
 ## 📞 Issues
 If you have any issues feel free to open an issue or join the [Discord Server.](https://discord.com/invite/w7B5nKB)

@@ -17,9 +17,10 @@
   },
   "homepage": "https://github.com/LachlanDev/Discord-BOT-Dashboard-V2#readme",
   "dependencies": {
+    "circular-json": "^0.5.9",
     "connect-flash": "^0.1.1",
     "dateformat": "^4.5.1",
-    "discord.js": "^12.5.3",
+    "discord.js": "^14.16.2",
     "easy-number-formatter": "^1.0.3",
     "ejs": "^3.1.6",
     "enmap": "^5.8.7",
@@ -27,6 +28,7 @@
     "express-fileupload": "^1.2.1",
     "express-session": "^1.17.2",
     "figlet": "^1.5.2",
+    "flatted": "^3.3.1",
     "got": "^11.8.2",
     "is-docker": "^2.2.1",
     "json-update": "^5.3.0",
@@ -34,9 +36,11 @@
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "node-fetch": "^2.6.2",
-    "passport": "^0.4.1",
+    "nodemon": "^3.1.7",
+    "passport": "^0.7.0",
     "passport-discord": "^0.1.4",
     "request": "^2.88.2",
-    "socket.io": "^4.2.0"
+    "socket.io": "^4.2.0",
+    "tough-cookie": "^5.0.0"
   }
 }
