@@ -18,7 +18,7 @@ Discord BOT Dashboard V2 is the successor of <a href="https://github.com/Lachlan
 <img src="./content/dashprev.JPG">
 
 ## 🚀 Installation / Setup
-Head over to the Docs to find all the instructions for setting up and running Discord BOT Dashboard V2. This can be found [here!](https://dbd.lachlan-dev.com/docs/) 
+Head over to the Docs to find all the instructions for setting up and running Discord BOT Dashboard V2.
 #### ⌚ Installing Requirements
 Download the latest version from [Releases](https://github.com/LachlanDev/Discord-BOT-Dashboard-V2/releases), open up the root directory and run the following command.
 ```bash
@@ -71,13 +71,12 @@ If you would like to contribute to the project please open a PR (Pull Request) c
 * [Node.JS](https://nodejs.org/en/) (Node.js v20.16.0)
 
 ## 📞 Issues
-If you have any issues feel free to open an issue or join the [Discord Server.](https://discord.com/invite/w7B5nKB)
+If you have any issues feel free to open an issue or join the [Discord Server.](https://discord.com/invite/TkZzRBaxP9)
 
 ## 🧲 Extra
 __Created by LachlanDev#8014__
-* [Website](https://lachlan-dev.com)
 * [Twitter](https://twitter.com/LachlanDev)
 * [Instagram](https://www.instagram.com/LachlanDev/)
-* [Discord Server](https://discord.com/invite/w7B5nKB)
+* [Discord Server](https://discord.com/invite/TkZzRBaxP9)
 * [Marketplace](https://github.com/LachlanDev/Discord-BOT-Dashboard-Marketplace)
 </br>
